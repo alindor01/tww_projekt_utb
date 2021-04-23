@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53517427-631c-4a32-bdc5-5deb26d8493c" name="Default Changelist" comment="" />
+    <list default="true" id="53517427-631c-4a32-bdc5-5deb26d8493c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +15,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -89,11 +94,24 @@
       <workItem from="1619007200488" duration="447000" />
       <workItem from="1619111527416" duration="2043000" />
       <workItem from="1619162593114" duration="4031000" />
+      <workItem from="1619167022658" duration="1661000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1619167049103</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1619167049103</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
   <component name="WindowStateProjectService">
     <state x="555" y="51" width="800" height="671" key="#Deployment" timestamp="1615053430891">
@@ -132,6 +150,10 @@
     </state>
     <state x="693" y="349" width="524" height="478" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.262.1366.768@0.0.1920.1040" timestamp="1618597461389" />
     <state x="693" y="244" width="524" height="478" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1366.768/0.0.1920.728@0.0.1920.728" timestamp="1619164684312" />
+    <state x="345" y="6" width="794" height="722" key="CommitChangelistDialog2" timestamp="1619167048835">
+      <screen x="0" y="0" width="1920" height="728" />
+    </state>
+    <state x="345" y="6" width="794" height="722" key="CommitChangelistDialog2/1920.0.1366.768/0.0.1920.728@0.0.1920.728" timestamp="1619167048835" />
     <state x="547" y="259" width="735" height="469" key="EditFileWatcherDialog" timestamp="1615053751616">
       <screen x="0" y="0" width="1920" height="728" />
     </state>
