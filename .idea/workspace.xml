@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="53517427-631c-4a32-bdc5-5deb26d8493c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/nette/security" />
+      <path value="$PROJECT_DIR$/vendor/nette/application" />
+      <path value="$PROJECT_DIR$/vendor/nette/robot-loader" />
+      <path value="$PROJECT_DIR$/vendor/nette/routing" />
+      <path value="$PROJECT_DIR$/vendor/latte/latte" />
+      <path value="$PROJECT_DIR$/vendor/nette/php-generator" />
+      <path value="$PROJECT_DIR$/vendor/nette/forms" />
+      <path value="$PROJECT_DIR$/vendor/nette/bootstrap" />
+      <path value="$PROJECT_DIR$/vendor/nette/schema" />
+      <path value="$PROJECT_DIR$/vendor/nette/finder" />
+      <path value="$PROJECT_DIR$/vendor/nette/di" />
+      <path value="$PROJECT_DIR$/vendor/nette/neon" />
+      <path value="$PROJECT_DIR$/vendor/nette/component-model" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/thanks" />
+      <path value="$PROJECT_DIR$/vendor/tracy/tracy" />
+      <path value="$PROJECT_DIR$/vendor/nette/caching" />
+      <path value="$PROJECT_DIR$/vendor/nette/mail" />
+      <path value="$PROJECT_DIR$/vendor/nette/http" />
+      <path value="$PROJECT_DIR$/vendor/nette/tester" />
+      <path value="$PROJECT_DIR$/vendor/nette/database" />
+      <path value="$PROJECT_DIR$/vendor/nette/utils" />
+      <path value="$PROJECT_DIR$/vendor/twbs/bootstrap" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1pLUVr8HdZrmjgndenwd8X0Oufk" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mariadb" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/presenters" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/presenters" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/model/Guards" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="53517427-631c-4a32-bdc5-5deb26d8493c" name="Default Changelist" comment="" />
+      <created>1614961890627</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614961890627</updated>
+      <workItem from="1614961891780" duration="5430000" />
+      <workItem from="1615050289410" duration="2586000" />
+      <workItem from="1615053568384" duration="1117000" />
+      <workItem from="1615128497907" duration="82000" />
+      <workItem from="1618522198679" duration="457000" />
+      <workItem from="1618522674414" duration="47951000" />
+      <workItem from="1618907544371" duration="607000" />
+      <workItem from="1619007200488" duration="447000" />
+      <workItem from="1619111527416" duration="2043000" />
+      <workItem from="1619162593114" duration="3916000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="555" y="51" width="800" height="671" key="#Deployment" timestamp="1615053430891">
+      <screen x="0" y="0" width="1920" height="728" />
+    </state>
+    <state x="555" y="51" width="800" height="671" key="#Deployment/1920.0.1366.768/0.0.1920.728@0.0.1920.728" timestamp="1615053430891" />
+    <state x="571" y="83" width="697" height="645" key="#Options" timestamp="1615053624935">
+      <screen x="0" y="0" width="1920" height="728" />
+    </state>
+    <state x="571" y="83" width="697" height="645" key="#Options/1920.0.1366.768/0.0.1920.728@0.0.1920.728" timestamp="1615053624935" />
+    <state x="555" y="180" width="800" height="671" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618554448632">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="555" y="180" width="800" height="671" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.262.1366.768@0.0.1920.1040" timestamp="1618554448632" />
+    <state x="689" y="338" width="532" height="384" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615054274248">
+      <screen x="0" y="0" width="1920" height="728" />
+    </state>
+    <state x="689" y="338" width="532" height="384" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1366.768/0.0.1920.728@0.0.1920.728" timestamp="1615054274248" />
+    <state x="697" y="144" width="424" height="578" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1615053750869">
+      <screen x="0" y="0" width="1920" height="728" />
+    </state>
+    <state x="697" y="144" width="424" height="578" key="#com.intellij.ide.macro.MacrosDialog/1920.0.1366.768/0.0.1920.728@0.0.1920.728" timestamp="1615053750869" />
+    <state x="1240" y="98" width="397" height="624" key="#com.intellij.ide.util.MemberChooser" timestamp="1619111628708">
+      <screen x="0" y="0" width="3286" height="728" />
+    </state>
+    <state x="761" y="140" width="397" height="624" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.262.1366.768@0.0.1920.1040" timestamp="1618559083602" />
+    <state x="1240" y="98" key="#com.intellij.ide.util.MemberChooser/0.0.3286.728@0.0.3286.728" timestamp="1619111628708" />
+    <state x="761" y="98" width="397" height="624" key="#com.intellij.ide.util.MemberChooser/1920.0.1366.768/0.0.1920.728@0.0.1920.728" timestamp="1615054150062" />
+    <state x="734" y="513" width="441" height="353" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1618527050379">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="734" y="513" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.262.1366.768@0.0.1920.1040" timestamp="1618527050379" />
+    <state x="734" y="359" width="441" height="353" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1366.768/0.0.1920.728@0.0.1920.728" timestamp="1614962118416" />
+    <state x="693" y="244" width="524" height="478" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1619164684312">
+      <screen x="0" y="0" width="1920" height="728" />
+    </state>
+    <state x="693" y="349" width="524" height="478" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.262.1366.768@0.0.1920.1040" timestamp="1618597461389" />
+    <state x="693" y="244" width="524" height="478" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1366.768/0.0.1920.728@0.0.1920.728" timestamp="1619164684312" />
+    <state x="547" y="259" width="735" height="469" key="EditFileWatcherDialog" timestamp="1615053751616">
+      <screen x="0" y="0" width="1920" height="728" />
+    </state>
+    <state x="547" y="259" width="735" height="469" key="EditFileWatcherDialog/1920.0.1366.768/0.0.1920.728@0.0.1920.728" timestamp="1615053751616" />
+    <state x="738" y="144" width="424" height="478" key="FileChooserDialogImpl" timestamp="1615053306593">
+      <screen x="0" y="0" width="1920" height="728" />
+    </state>
+    <state x="738" y="144" width="424" height="478" key="FileChooserDialogImpl/1920.0.1366.768/0.0.1920.728@0.0.1920.728" timestamp="1615053306593" />
+    <state width="1294" height="277" key="GridCell.Tab.0.bottom" timestamp="1618583002820">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1294" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.262.1366.768@0.0.1920.1040" timestamp="1618583002820" />
+    <state width="1294" height="277" key="GridCell.Tab.0.center" timestamp="1618583002820">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1294" height="277" key="GridCell.Tab.0.center/0.0.1920.1040/1920.262.1366.768@0.0.1920.1040" timestamp="1618583002820" />
+    <state width="1294" height="277" key="GridCell.Tab.0.left" timestamp="1618583002820">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1294" height="277" key="GridCell.Tab.0.left/0.0.1920.1040/1920.262.1366.768@0.0.1920.1040" timestamp="1618583002820" />
+    <state width="1294" height="277" key="GridCell.Tab.0.right" timestamp="1618583002820">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1294" height="277" key="GridCell.Tab.0.right/0.0.1920.1040/1920.262.1366.768@0.0.1920.1040" timestamp="1618583002820" />
+    <state x="1030" y="186" width="890" height="480" key="NewPhpClassDialog" timestamp="1619111547948">
+      <screen x="0" y="0" width="3286" height="728" />
+    </state>
+    <state x="709" y="266" width="520" height="536" key="NewPhpClassDialog/0.0.1920.1040/1920.262.1366.768@0.0.1920.1040" timestamp="1618560698316" />
+    <state x="1030" y="186" width="890" height="480" key="NewPhpClassDialog/0.0.3286.728@0.0.3286.728" timestamp="1619111547948" />
+    <state x="709" y="186" width="520" height="536" key="NewPhpClassDialog/1920.0.1366.768/0.0.1920.728@0.0.1920.728" timestamp="1615054521413" />
+    <state x="530" y="0" key="SettingsEditor" timestamp="1619113811407">
+      <screen x="0" y="0" width="3286" height="728" />
+    </state>
+    <state x="364" y="0" key="SettingsEditor/0.0.1920.1040/1920.262.1366.768@0.0.1920.1040" timestamp="1618555261033" />
+    <state x="530" y="0" key="SettingsEditor/0.0.3286.728@0.0.3286.728" timestamp="1619113811406" />
+    <state x="364" y="0" key="SettingsEditor/1920.0.1366.768/0.0.1920.728@0.0.1920.728" timestamp="1615053752164" />
+    <state x="693" y="327" width="524" height="378" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1618559872940">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="693" y="327" width="524" height="378" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/0.0.1920.1040/1920.262.1366.768@0.0.1920.1040" timestamp="1618559872940" />
+    <state x="427" y="249" width="691" height="582" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1618656392213">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="427" y="249" width="691" height="582" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040/1920.262.1366.768@0.0.1920.1040" timestamp="1618656392213" />
+    <state x="808" y="344" width="587" height="502" key="find.popup" timestamp="1618655622346">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="808" y="344" width="587" height="502" key="find.popup/0.0.1920.1040/1920.262.1366.768@0.0.1920.1040" timestamp="1618655622346" />
+    <state x="624" y="167" key="run.anything.popup" timestamp="1619164666201">
+      <screen x="0" y="0" width="1920" height="728" />
+    </state>
+    <state x="624" y="238" key="run.anything.popup/0.0.1920.1040/1920.262.1366.768@0.0.1920.1040" timestamp="1618669759258" />
+    <state x="624" y="167" key="run.anything.popup/1920.0.1366.768/0.0.1920.728@0.0.1920.728" timestamp="1619164666201" />
+    <state x="709" y="431" width="400" height="271" key="scopes" timestamp="1615053730290">
+      <screen x="0" y="0" width="1920" height="728" />
+    </state>
+    <state x="709" y="431" width="400" height="271" key="scopes/1920.0.1366.768/0.0.1920.728@0.0.1920.728" timestamp="1615053730290" />
+    <state x="623" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1619165212688">
+      <screen x="0" y="0" width="1920" height="728" />
+    </state>
+    <state x="623" y="70" width="672" height="969" key="search.everywhere.popup/0.0.1920.1040/1920.262.1366.768@0.0.1920.1040" timestamp="1618610185856" />
+    <state x="623" y="49" width="672" height="678" key="search.everywhere.popup/1920.0.1366.768/0.0.1920.728@0.0.1920.728" timestamp="1619165212688" />
+    <state x="685" y="454" width="540" height="166" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1615053087262">
+      <screen x="0" y="0" width="1920" height="728" />
+    </state>
+    <state x="685" y="454" width="540" height="166" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/1920.0.1366.768/0.0.1920.728@0.0.1920.728" timestamp="1615053087262" />
+  </component>
+</project>

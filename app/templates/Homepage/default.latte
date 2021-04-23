@@ -1,0 +1,335 @@
+{layout '../@layout.latte'}
+
+{block content}
+
+
+{if !$logged}
+<div class="jumbotron" style="background-color: #7b68ee9c;text-align: center;">
+  <h1 class="display-3"><span style="color:forestgreen" class="glyphicon glyphicon-check" aria-hidden="true"></span>ToDo</h1>
+  <p class="lead">Vítejte v aplikaci ToDo, pro pokračování se prosím přihlašte</p>
+  <hr class="my-4">
+
+  <form id="loginForm" style="max-width: 25%;margin-left: auto;margin-right: auto;margin-top:15px;">
+<div class="form-group">
+    <label for="login">Přihlašovací jméno</label>
+    <input type="text" class="form-control" id="login" aria-describedby="loginHelp" placeholder="Přihlašovací jméno">
+</div>
+<div class="form-group">
+    <label for="password">Heslo</label>
+    <input type="password" class="form-control" id="password" placeholder="Heslo">
+</div>
+<button id="#loginForm" type="submit" class="btn btn-primary">Přihlásit</button>
+</form>
+</div>
+{block scripts}
+<script type ="text/javascript">
+$(document).ready(function () {
+  $("#loginForm").submit(function (event) {
+    $.post("/login",
+        {
+            login: $("#login").val(),
+            password: $("#password").val()
+      }).done(function(data) {
+          if (data.message) {
+              alert(data.message);
+          } else {
+              window.location.replace("/");
+          }
+  });
+
+    event.preventDefault();
+  });
+});
+</script>
+{/block}
+
+
+{else}
+{if $logged}
+<script>
+    var unfinished = [];
+    var finished = [];
+
+
+function openEditTask(id) {
+    var idInputInModal = $("#myModalId");
+    var inputNameInModal = $("#myModalInputName");
+    var inputDescriptionInModal = $("#myModalInputDescription");
+
+    var item;
+
+    unfinished.forEach(function(value) {
+        if (value.id === id) {
+            item = value;
+        }
+    });
+
+    finished.forEach(function(value) {
+        if (value.id === id) {
+            item = value;
+        }
+    });
+
+    idInputInModal.attr('value', id);
+    inputNameInModal.attr('value', item.name);
+    inputDescriptionInModal.append(item.description);
+
+    $('#myModal').modal({
+        keyboard: false,
+        backdrop: 'static'
+    });
+}
+
+function editTask() {
+    var idInputInModal = $("#myModalId");
+    var inputNameInModal = $("#myModalInputName");
+    var inputDescriptionInModal = $("#myModalInputDescription");
+
+    var item;
+    var id = idInputInModal.val();
+    unfinished.forEach(function(value) {
+        if (value.id == id) {
+            item = value;
+        }
+    });
+
+    finished.forEach(function(value) {
+        if (value.id == id) {
+            item = value;
+        }
+    });
+
+
+    $.post("/tasks/edit",
+        {
+            entity: {
+                id: id,
+                name: inputNameInModal.val(),
+                description: inputDescriptionInModal.val(),
+                completed: item.isCompleted,
+            }
+      }).done(function(data) {
+          if (data && data.message) {
+              alert(data.message);
+          } else {
+              window.location.replace("/");
+          }
+    });
+}
+
+function moveToFinished(id) {
+       $.post("/tasks/move-to-finished/" + id).done(function(data) {
+          if (data.message) {
+              alert(data.message);
+          } else {
+              var removed = null;
+              unfinished.filter(function(item) {
+                  if (item.id === id) {
+                      removed = item;
+                      return false;
+                  }
+                  return true;
+              });
+
+              finished.push(removed);
+              removeItem(removed.id);
+              addFinishedItem(removed.id, removed.name, removed.description);
+          }
+    });
+}
+
+function moveToUnfinished(id) {
+       $.post("/tasks/move-to-unfinished/" + id).done(function(data) {
+          if (data.message) {
+              alert(data.message);
+          } else {
+              var removed = null;
+              finished.filter(function(item) {
+                  if (item.id === id) {
+                      removed = item;
+                      return false;
+                  }
+                  return true;
+              });
+
+              unfinished.push(removed);
+              removeItem(removed.id);
+              addUnfinishedItem(removed.id, removed.name, removed.description);
+          }
+    });
+}
+
+function createTask() {
+    $("#addTaskForm").submit(function (event) {
+    $.post("/tasks/edit",
+        {
+            entity: {
+                name: $("#taskName").val(),
+                description: $("#taskDescription").val(),
+                completed: false
+            }
+      }).done(function(data) {
+          if (data.message) {
+              alert(data.message);
+          } else {
+              window.location.replace("/");
+          }
+    });
+  });
+}
+
+function deleteTask(id) {
+    $.post("/tasks/delete/" + id).done(function(data) {
+          if (data.message) {
+              alert(data.message);
+          } else {
+              finished.filter(function(item) {
+                  return item.id!=id;
+
+              });
+
+              unfinished.filter(function(item) {
+                  return item.id!=id;
+              });
+
+              removeItem(id);
+          }
+    });
+}
+
+function addFinishedItem(id, name, description) {
+$('#finishedRow').append('<div id="item-id-'+ id +'" class="col-sm-3 col-md-3">\n'+
+'<div class="thumbnail">\n'+
+'<div class="caption">\n'+
+'<h4>'+ name +'</h4>\n'+
+'<p>'+ description +'</p>\n'+
+'<hr class="my-4">\n'+
+'<p style="text-align: center">\n'+
+'<a onclick="openEditTask(' + id + ');return false;" href="" class="btn btn-warning" role="button"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>\n'+
+'<a onclick="moveToUnfinished(' + id + ');return false;" href="" class="btn btn-info" role="button"><span class="glyphicon glyphicon-backward" aria-hidden="true"></span></a>\n'+
+'<a onclick="deleteTask(' + id + ');return false;" href="" class="btn btn-danger" role="button"><span id="delete" class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>\n'+
+'</p>\n'+
+'</div>\n'+
+'</div>\n'+
+'</div>');
+}
+
+function addUnfinishedItem(id, name, description) {
+$('#unfinishedRow').append('<div  id="item-id-'+ id +'" class="col-sm-3 col-md-3">\n'+
+'<div class="thumbnail">\n'+
+'<div class="caption">\n'+
+'<h4>'+ name + '</h4>\n'+
+'<p>'+ description + '</p>\n'+
+'<hr class="my-4">\n'+
+'<p style="text-align: center">\n'+
+'<a onclick="openEditTask(' + id + ');return false;" href="" class="btn btn-warning" role="button"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>\n'+
+'<a onclick="moveToFinished(' + id + ');return false;" class="btn btn-success" role="button"><span class="glyphicon glyphicon-check" aria-hidden="true"></span></a>\n'+
+'<a onclick="deleteTask(' + id + ');return false;" href="" class="btn btn-danger" role="button"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>\n'+
+'</p>\n'+
+'</div>\n'+
+'</div>\n'+
+'</div>\n'+
+'</div>');
+}
+
+function removeItem(id) {
+    $("#item-id-"+ id).remove();
+}
+
+function getData() {
+        $.post("/tasks/get-all-unfinished").done(function(data) {
+        unfinished = data;
+
+        for (var i=0; i<unfinished.length;i++) {
+            addUnfinishedItem(unfinished[i].id, unfinished[i].name, unfinished[i].description);
+        }
+    });
+        $.post("/tasks/get-all-completed").done(function(data) {
+       finished = data;
+        for (var i=0; i<finished.length;i++) {
+            addFinishedItem(finished[i].id, finished[i].name, finished[i].description);
+        }
+    });
+}
+
+$(document).ready(function () {
+    createTask();
+    getData();
+});
+
+
+</script>
+{/if}
+<div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#incompleted" aria-controls="incompleted" role="tab" data-toggle="tab">Nedokončené úkoly</a></li>
+    <li role="presentation"><a href="#completed" aria-controls="completed" role="tab" data-toggle="tab">Dokončené úkoly</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane fade in active" id="incompleted">
+
+<div id="unfinishedRow" class="row" style="margin-top: 15px">
+
+
+<div class="col-sm-3 col-md-3">
+<div class="thumbnail">
+<div class="caption">
+<form id="addTaskForm">
+<div class="form-group">
+<input type="text" class="form-control" id="taskName" aria-describedby="nameHelp" placeholder="Název">
+</div>
+<div class="form-group">
+<textarea style="resize:vertical" class="form-control" id="taskDescription" placeholder="Popis"></textarea>
+</div>
+<button id="#addTaskForm" type="submit" class="btn btn-success"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Přidat nový úkol</button>
+</form>
+</div>
+</div>
+</div>
+
+
+</div>
+
+
+</div>
+<div role="tabpanel" class="tab-pane fade" id="completed">
+<div id="finishedRow" class="row" style="margin-top: 15px">
+
+
+
+</div>
+
+</div>
+</div>
+
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Upravit úkol</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+            <input style="display: none" type="text" class="form-control" id="myModalId" aria-describedby="nameHelp">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="myModalInputName" aria-describedby="nameHelp" placeholder="Název">
+        </div>
+        <div class="form-group">
+            <textarea style="resize:vertical" class="form-control" id="myModalInputDescription" placeholder="Popis"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Zavřít</button>
+        <button onclick="editTask();return false;" type="button" class="btn btn-primary">Uložit změny</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+{/if}

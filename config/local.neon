@@ -1,0 +1,13 @@
+parameters:
+
+
+database:
+	dsn: 'mysql:host=127.0.0.1;dbname=test'
+	user:
+	password:
+
+security:
+	users:
+		# jméno: heslo
+		admin: admin
+		user: user
